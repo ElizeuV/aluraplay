@@ -1,0 +1,91 @@
+.cabecalho__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /*fixa o cabecalho*/
+    top: 0;
+    /*define a posição da fixação do cabeçalho*/
+
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 70px;
+    width: 100%;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li {
+    align-self: center; /*alinha sa li's no centro do container*/
+}
+
+.menu__itens{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /*tira a quebra de linha da ancora(link)*/
+    overflow: scroll;
+    /*barra de rolagem*/
+    gap: 15px;
+}
+
+.rodape__container {
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+
+}
+
+@media (min-width: 843px) {
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    .rodape__container {
+        justify-content: space-between;
+    }
+}
+
+/* MENU LATERAL PARA TELAS DE TABLETS */
+
+@media (min-width: 834px) {
+
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+    
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+    
+    }
